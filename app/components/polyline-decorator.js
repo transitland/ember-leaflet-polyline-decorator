@@ -1,0 +1,1 @@
+export { default } from 'ember-leaflet-polyline-decorator/components/polyline-decorator';
