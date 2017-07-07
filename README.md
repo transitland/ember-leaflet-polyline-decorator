@@ -1,5 +1,7 @@
 # Ember-leaflet-polyline-decorator
 
+[![npm version](https://badge.fury.io/js/%40transitland%2Fember-leaflet-polyline-decorator.svg)](https://badge.fury.io/js/%40transitland%2Fember-leaflet-polyline-decorator)
+
 An [Ember-CLI](https://ember-cli.com/) addon for using the [Leaflet Polyline Decorator plugin](https://github.com/bbecquet/Leaflet.PolylineDecorator) in [Ember Leaflet 2.0](http://www.ember-leaflet.com/).
 
 
