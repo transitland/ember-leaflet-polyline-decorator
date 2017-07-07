@@ -1,6 +1,7 @@
 # Ember-leaflet-polyline-decorator
 
-This README outlines the details of collaborating on this Ember addon.
+An [Ember-CLI](https://ember-cli.com/) addon for using the [Leaflet Polyline Decorator plugin](https://github.com/bbecquet/Leaflet.PolylineDecorator) in [Ember Leaflet 2.0](http://www.ember-leaflet.com/).
+
 
 ## Installation
 
