@@ -10,6 +10,6 @@ module.exports = {
   // }
 
   afterInstall: function(options) {
-    return this.addBowerPackageToProject('leaflet-polylinedecorator', 'bbecquet/Leaflet.PolylineDecorator');
+    return this.addBowerPackageToProject('leaflet-polylinedecorator', '^1.1.0');
   }
 };
