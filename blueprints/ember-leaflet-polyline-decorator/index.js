@@ -1,15 +1,10 @@
 /*jshint node:true*/
 module.exports = {
-  description: '',
+  description: 'add leaflet-polylinedecorator, using npm',
 
-  // locals: function(options) {
-  //   // Return custom template variables here.
-  //   return {
-  //     foo: options.entity.options.foo
-  //   };
-  // }
-
-  afterInstall: function(options) {
-    return this.addBowerPackageToProject('leaflet-polylinedecorator', '^1.1.0');
+  normalizeEntityName: function() {}, // no-op since we're just adding dependencies
+  
+  afterInstall: function() {
+    return this.addPackageToProject('leaflet-polylinedecorator', '^1.2.0'); // Add's a package to the project's package.json
   }
 };
