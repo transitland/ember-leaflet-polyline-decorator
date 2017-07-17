@@ -2,28 +2,33 @@
 
 [![npm version](https://badge.fury.io/js/ember-leaflet-polyline-decorator.svg)](https://badge.fury.io/js/ember-leaflet-polyline-decorator)
 
-An [Ember-CLI](https://ember-cli.com/) addon for using the [Leaflet Polyline Decorator plugin](https://github.com/bbecquet/Leaflet.PolylineDecorator) in [Ember Leaflet 2.0](http://www.ember-leaflet.com/).
+An [Ember-CLI](https://ember-cli.com/) addon for using the [Leaflet Polyline Decorator plugin](https://github.com/bbecquet/Leaflet.PolylineDecorator) in [Ember Leaflet](http://www.ember-leaflet.com/).
 
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+```bash
+ember install ember-leaflet-polyline-decorator
+```
 
-## Running
+## Updates
+See [CHANGELOG](CHANGELOG.md) for the list of all changes.
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+## Basic Usage
 
-## Running Tests
+```hbs
+{{polyline-decorator latlngs=polylineLocations patterns=polylinePatterns}}
+```
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+```javascript
+polylineLocations: [
+	L.latLng(latitude,longitude),
+	L.latLng(latitude,longitude),
+	L.latLng(latitude,longitude)
+],
+polylinePatterns: [
+	{offset: 0, repeat: 50, symbol: L.Symbol.arrowHead({pixelSize: 15, headAngle: 30, pathOptions: {stroke: false, fillOpacity:1.0, weight:1, color:'red'}})}
+]
+```
 
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+For more comprehensive examples and usage, see the [Leaflet Polyline Decorator plugin](https://github.com/bbecquet/Leaflet.PolylineDecorator)
