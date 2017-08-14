@@ -16,28 +16,34 @@ export default BaseLayer.extend({
 
   didInsertParent() {
     this._super(...arguments);
-    this._addPatternObserver();
+    this._addObservers();
   },
 
   willDestroyParent() {
-    this._removePatternObserver();
+    this._removeObservers();
     this._super(...arguments);
   },
   
   // Observe for when patterns option changes, so the decorator can be redrawn with the new pattern
-  _addPatternObserver() {
-    this._patternObserver = null;
+  _addObservers() {
+    this._argObservers = {};
     
-    this._patternObserver = function() {
+    this._argObservers['patterns'] = function() {
       let value = this.get('patterns');
       this._layer.setPatterns(value);
     };
-
-    this.addObserver('patterns', this, this._patternObserver);
+    this.addObserver('patterns', this, this._argObservers['patterns']);
+    
+    this._argObservers['latlngs'] = function() {
+      let value = this.get('latlngs');
+      this._layer.setPaths(value);
+    };
+    this.addObserver('latlngs', this, this._argObservers['latlngs']);
   },
 
-  _removePatternObserver() {
-    this.removeObserver('patterns', this, this._patternObserver);
-    this._patternObserver = null;
+  _removeObservers() {
+    this.removeObserver('patterns', this, this._argObservers['patterns']);
+    this.removeObserver('latlngs', this, this._argObservers['latlngs']);
+    this._argObservers = {};
   }
 });
