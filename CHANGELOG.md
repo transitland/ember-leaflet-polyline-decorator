@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 0.3.1
+
+- latlngs argument observer, path can now be changed
+- Removed unncecessary blueprint files
+- Updated leaflet-polylinedecorator to ^1.3.2
+
 ## 0.3.0
 
 - Patterns argument observer, pattern can now be changed https://github.com/transitland/ember-leaflet-polyline-decorator/pull/4
