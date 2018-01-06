@@ -1,6 +1,6 @@
 {
   "name": "ember-leaflet-polyline-decorator",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "An Ember-CLI addon for using the Leaflet Polyline Decorator plugin.",
   "directories": {
     "doc": "doc",

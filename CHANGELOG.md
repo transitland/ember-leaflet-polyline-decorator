@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 0.3.2
+
+- Updated leaflet dependency to ^1.1.0
+
 ## 0.3.1
 
 - latlngs argument observer, path can now be changed
