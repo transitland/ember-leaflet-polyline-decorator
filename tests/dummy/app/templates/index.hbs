@@ -1,0 +1,11 @@
+{{#leaflet-map options=model.options lat=model.lat lng=model.lng zoom=model.zoom as |layers|}}
+  {{layers.tile url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+  {{#marker-layer location=model.specialLocation as |marker|}}
+    {{#popup-layer}}
+      2019 EmberConf!
+    {{/popup-layer}}
+  {{/marker-layer}}
+  {{#polyline-decorator latlngs=model.lineCoords patterns=model.patterns}}
+    {{polyline-layer locations=model.lineCoords}}
+  {{/polyline-decorator}}
+{{/leaflet-map}}
