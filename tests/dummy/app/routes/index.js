@@ -1,8 +1,10 @@
-import Ember from "ember";
+import Route from "@ember/routing/route";
+import { hash } from "rsvp";
+/* global L */
 
-export default Ember.Route.extend({
+export default Route.extend({
   model() {
-    return Ember.RSVP.hash({
+    return hash({
       options: {},
       bounds: null,
       lat: 45.523,
