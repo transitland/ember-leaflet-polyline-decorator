@@ -50,20 +50,19 @@ module("Integration | Component | polyline decorator", function(hooks) {
   test("it renders", async function(assert) {
     await render(hbs`
       <LeafletMap @zoom={{10}} @center={{center}} @maxZoom={{25}} as |layers|>
-        <layers.polyline-decorator @latlngs={{latlngs}} @patterns={{patterns}} as |polylineDecorator|>
-          <polylineDecorator.polyline @locations={{latlngs}} />
+        <layers.polyline @locations={{latlngs}} />
+        <layers.polyline-decorator @latlngs={{latlngs}} @patterns={{patterns}}>
         </layers.polyline-decorator>
       </LeafletMap>`);
 
-    assert.equal(polylineDecorator.childComponents.length, 1);
+    assert.equal(polylineDecorator.options.patterns[0].offset, 0, 1);
   });
 
-  test("it renders with patterns options", async function(assert) {
+  test("it creates _layer", async function(assert) {
     await render(hbs`
       <LeafletMap @zoom={{10}} @center={{center}} @maxZoom={{25}} as |layers|>
-        <layers.polyline-decorator @latlngs={{latlngs}} @patterns={{patterns}} as |polylineDecorator|>
-          <polylineDecorator.polyline @locations={{latlngs}} />
-        </layers.polyline-decorator>
+        <layers.polyline @locations={{latlngs}} />
+        <layers.polyline-decorator @latlngs={{latlngs}} @patterns={{patterns}} />
       </LeafletMap>`);
 
     assert.equal(polylineDecorator._layer.options.patterns[0].offset, 0);

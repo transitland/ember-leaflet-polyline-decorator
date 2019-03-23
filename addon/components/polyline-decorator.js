@@ -1,10 +1,6 @@
 import BaseLayer from "ember-leaflet/components/base-layer";
-import { ParentMixin } from "ember-composability-tools";
-import layout from "../templates/components/polyline-decorator";
 
-export default BaseLayer.extend(ParentMixin, {
-  layout,
-
+export default BaseLayer.extend({
   leafletRequiredOptions: Object.freeze(["latlngs"]),
 
   leafletOptions: Object.freeze(["patterns"]),

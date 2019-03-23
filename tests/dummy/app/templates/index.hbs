@@ -1,12 +1,10 @@
 <LeafletMap @zoom={{model.zoom}} @lat={{model.lat}} @lng={{model.lng}} as |layers|>
-  {{log model.lat}}
   <layers.tile @url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" />
   <layers.marker @location={{model.specialLocation}}>
     <layers.popup>
       2019 EmberConf!
     </layers.popup>
   </layers.marker>
-  <layers.polyline-decorator @latlngs={{model.lineCoords}} @patterns={{model.patterns}} as |polylineDecorator|>
-    <layers.polyline @locations={{model.lineCoords}} />
-  </layers.polyline-decorator>
+  <layers.polyline @locations={{model.lineCoords}} />
+  <layers.polyline-decorator @latlngs={{model.lineCoords}} @patterns={{model.patterns}} />
 </LeafletMap>
