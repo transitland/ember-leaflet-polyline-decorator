@@ -1,6 +1,14 @@
 # Changelog
 
-## Unreleased
+## 0.4.0
+
+- Fixed for Ember 3.4+
+- Dependency updates
+- ember-cli 3.8.1 and scenario for 3.4.0
+- Removing jshint in favor of eslint
+- Remove bower in favor of npm
+- Demo app (with angle bracket components)
+- 2 tests (with angle bracket components)
 
 ## 0.3.2
 
